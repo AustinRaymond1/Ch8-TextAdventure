@@ -47,7 +47,46 @@ public class Game
         
         // initialise room exits
         airport.setExit("north", town);
+        airport.setExit("northeast", temple);
+        airport.setExit("northwest", lake);
         
+        town.setExit("south", airport);
+        town.setExit("east", temple);
+        town.setExit("west", lake);
+        town.setExit("north", forest);
+        
+        lake.setExit("east", town);
+        lake.setExit("southeast", airport);
+        lake.setExit("northeast", forest);
+        
+        temple.setExit("southwest", airport);
+        temple.setExit("west", town);
+        
+        forest.setExit("north", wasteland);
+        forest.setExit("northeast", mountain);
+        forest.setExit("southwest", lake);
+        forest.setExit("south", town);
+        
+        wasteland.setExit("north", shibuya);
+        wasteland.setExit("east", mountain);
+        wasteland.setExit("west", desert);
+        wasteland.setExit("south", forest);
+        
+        mountain.setExit("east", cave);
+        mountain.setExit("west", wasteland);
+        mountain.setExit("southwest", forest);
+        
+        cave.setExit("go foreward", temple);
+        
+        desert.setExit("east", wasteland);
+        desert.setExit("west", pyramid);
+        
+        pyramid.setExit("east", desert);
+        
+        shibuya.setExit("south", wasteland);
+        shibuya.setExit("north", parthanon);
+        
+        parthanon.setExit("south", shibuya);
         
         currentRoom = airport;  // start game at the airport
     }
