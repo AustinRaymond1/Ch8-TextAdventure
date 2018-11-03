@@ -46,7 +46,7 @@ public class Game
         desert = new Room("A very dry place with dangerous creatures");
         
         // initialise room exits
-        pyramid.setExit("east", );
+        airport.setExit("north", town);
         
         
         currentRoom = airport;  // start game at the airport
@@ -76,8 +76,8 @@ public class Game
     private void printWelcome()
     {
         System.out.println();
-        System.out.println("Welcome to the World of Zuul!");
-        System.out.println("World of Zuul is a new, incredibly boring adventure game.");
+        System.out.println("Welcome to the Acaida");
+        System.out.println("Acaida is a land filled with peril and adventure");
         System.out.println("Type '" + CommandWord.HELP + "' if you need help.");
         System.out.println();
         System.out.println(currentRoom.getLongDescription());
@@ -123,8 +123,8 @@ public class Game
      */
     private void printHelp() 
     {
-        System.out.println("You are lost. You are alone. You wander");
-        System.out.println("around at the university.");
+        System.out.println("You have flown to the mysterious land of Acadia");
+        System.out.println("looking for adventure");
         System.out.println();
         System.out.println("Your command words are:");
         parser.showCommands();
