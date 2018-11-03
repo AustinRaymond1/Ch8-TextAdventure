@@ -46,10 +46,10 @@ public class Game
         desert = new Room("A very dry place with dangerous creatures");
         
         // initialise room exits
-        outside.setExit("east", theater);
+        pyramid.setExit("east", );
         
-
-        currentRoom = outside;  // start game outside
+        
+        currentRoom = airport;  // start game at the airport
     }
 
     /**
