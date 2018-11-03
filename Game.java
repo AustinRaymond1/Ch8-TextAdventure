@@ -29,7 +29,7 @@ public class Game
     private void createRooms()
     {
         Room pyramid, forest, lake, temple, parthanon, cave, wasteland, 
-        mountain, shibuya, airport, town, desert;
+        mountain, shibuya, airport, town, desert, temple_exit;
       
         // create the rooms
         pyramid = new Room("An ancient Egyptian pyramid from 49 BC");
@@ -37,13 +37,14 @@ public class Game
         lake = new Room("A small body of water where something mysterious lurks below the surface");
         temple = new Room("An ancient temple where dark rituals were performed");
         parthanon = new Room("An ancient Greek place of worship");
-        cave = new Room("a dark cave where a slumbering creature awaits");
+        cave = new Room("a dark cave, the cave colapses behind you and you can only move forward");
         wasteland = new Room("a barren wasteland with nothing but bones");
         mountain = new Room("a lonely mountain");
         shibuya = new Room("The bustling center of modern day Tokyo");
         airport = new Room("An airport for people to come and go from Acadia");
         town = new Room("The main hub of Acaida");
         desert = new Room("A very dry place with dangerous creatures");
+        temple_exit = new Room("you emerge at the temple near the town");
         
         // initialise room exits
         airport.setExit("north", town);
@@ -76,7 +77,10 @@ public class Game
         mountain.setExit("west", wasteland);
         mountain.setExit("southwest", forest);
         
-        cave.setExit("go foreward", temple);
+        cave.setExit("forward", temple_exit);
+        
+        temple_exit.setExit("southwest", airport);
+        temple_exit.setExit("west", town);
         
         desert.setExit("east", wasteland);
         desert.setExit("west", pyramid);
