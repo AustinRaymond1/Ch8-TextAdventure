@@ -1,18 +1,11 @@
 /**
- *  This class is the main class of the "World of Zuul" application. 
- *  "World of Zuul" is a very simple, text based adventure game.  Users 
- *  can walk around some scenery. That's all. It should really be extended 
- *  to make it more interesting!
+ *  Welcome to Acadia, a land of journey and peril.  Acadia is the 
+ *  convergence of multiple periods of time, leading you to find many
+ *  percular landmarks from famous time periods.  Who knows what you will find
+ *  on your journey through Acaida.
  * 
- *  To play this game, create an instance of this class and call the "play"
- *  method.
- * 
- *  This main class creates and initialises all the others: it creates all
- *  rooms, creates the parser and starts the game.  It also evaluates and
- *  executes the commands that the parser returns.
- * 
- * @author  Michael Kölling and David J. Barnes
- * @version 2011.08.10
+ * @author  Austin Raymond
+ * @version 2018.11.03
  */
 
 public class Game 
@@ -30,32 +23,31 @@ public class Game
     }
 
     /**
-     * Create all the rooms and link their exits together.
+     * Create all the rooms and link their exits together.  Old Rooms deleted
+     * and 12 new ones were added
      */
     private void createRooms()
     {
-        Room outside, theater, pub, lab, office;
+        Room pyramid, forest, lake, temple, parthanon, cave, wasteland, 
+        mountain, shibuya, airport, town, desert;
       
         // create the rooms
-        outside = new Room("outside the main entrance of the university");
-        theater = new Room("in a lecture theater");
-        pub = new Room("in the campus pub");
-        lab = new Room("in a computing lab");
-        office = new Room("in the computing admin office");
+        pyramid = new Room("An ancient Egyptian pyramid from 49 BC");
+        forest = new Room("A dark forest with minimal sunlight where creatures lurk");
+        lake = new Room("A small body of water where something mysterious lurks below the surface");
+        temple = new Room("An ancient temple where dark rituals were performed");
+        parthanon = new Room("An ancient Greek place of worship");
+        cave = new Room("a dark cave where a slumbering creature awaits");
+        wasteland = new Room("a barren wasteland with nothing but bones");
+        mountain = new Room("a lonely mountain");
+        shibuya = new Room("The bustling center of modern day Tokyo");
+        airport = new Room("An airport for people to come and go from Acadia");
+        town = new Room("The main hub of Acaida");
+        desert = new Room("A very dry place with dangerous creatures");
         
         // initialise room exits
         outside.setExit("east", theater);
-        outside.setExit("south", lab);
-        outside.setExit("west", pub);
-
-        theater.setExit("west", outside);
-
-        pub.setExit("east", outside);
-
-        lab.setExit("north", outside);
-        lab.setExit("east", office);
-
-        office.setExit("west", lab);
+        
 
         currentRoom = outside;  // start game outside
     }
