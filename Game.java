@@ -153,6 +153,16 @@ public class Game
             case QUIT:
                 wantToQuit = quit(command);
                 break;
+                
+            case EAT:
+                System.out.println("You ate a piece of food");
+                break;
+                
+            case LOOK:
+                
+            
+            case PICKUP:
+                
         }
         return wantToQuit;
     }
