@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=GameMain
+comment0.text=\r\n\ This\ is\ the\ method\ used\ to\ run\ the\ game\r\n\r\n\ @author\ Austin\ Raymond\r\n\ @version\ 2018.11.05\r\n
+comment1.params=
+comment1.target=GameMain()
+comment1.text=\r\n\ Allows\ you\ to\ play\ the\ game,\ and\ only\ that\r\n
+numComments=2

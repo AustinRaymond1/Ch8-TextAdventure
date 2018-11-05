@@ -124,6 +124,8 @@ public class Game
         System.out.println("Acaida is a land filled with peril and adventure");
         System.out.println("Type '" + CommandWord.HELP + "' if you need help.");
         System.out.println();
+        System.out.println("Your commands are:"); parser.showCommands();
+        System.out.println();
         System.out.println(currentRoom.getLongDescription());
     }
 
@@ -196,7 +198,6 @@ public class Game
         System.out.println();
         System.out.println("Your command words are:");
         parser.showCommands();
-        //System.out.println("eat, look, pickup, drop, check");
     }
 
     /** 
