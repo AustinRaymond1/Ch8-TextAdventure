@@ -164,7 +164,7 @@ public class Game
                     System.out.println("There is an item nearby");
                 }
                 else{
-                    System.out.println("There is not item nearby");
+                    System.out.println("There is no item nearby");
                 }
                 break;
                 
@@ -196,6 +196,7 @@ public class Game
         System.out.println();
         System.out.println("Your command words are:");
         parser.showCommands();
+        //System.out.println("eat, look, pickup, drop, check");
     }
 
     /** 

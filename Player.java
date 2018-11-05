@@ -48,6 +48,7 @@ public class Player
         if (item_bool){
             System.out.println("You picked up the item");
             inventory = "item";
+            item_bool = false;
         }
         else{
             System.out.println("There is no item to pick up");
@@ -62,6 +63,7 @@ public class Player
         }
         else{
             System.out.println("You dropped the item");
+            inventory = "";
         }
     }
 }
