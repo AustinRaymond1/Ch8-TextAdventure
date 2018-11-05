@@ -45,6 +45,7 @@ public class Player
      * Method for picking up items
      */
     public void playerPickup(){
+        //checks if there actually is an item for you to pickup
         if (item_bool){
             System.out.println("You picked up the item");
             inventory = "item";
@@ -58,6 +59,7 @@ public class Player
      * Method for dropping items
      */
     public void playerDrop(){
+        //checks if you have an item in your inventory to drop
         if(inventory == ""){
             System.out.println("You do not have any items to drop");
         }
