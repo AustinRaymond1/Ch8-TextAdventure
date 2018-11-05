@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Player
+comment0.text=\r\n\ This\ class\ will\ hold\ the\ player's\ inventory\ and\ all\ the\ actions\ assocated\ with\ it\r\n\r\n\ @author\ Austin\ Raymond\r\n\ @version\ 2018.11.04\r\n
+comment1.params=
+comment1.target=Player()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Player\r\n
+comment2.params=
+comment2.target=java.lang.String\ checkInventory()
+comment2.text=\r\n\ This\ is\ how\ the\ player\ checks\ their\ inventory\r\n
+comment3.params=
+comment3.target=boolean\ playerLook()
+comment3.text=\r\n\ This\ is\ the\ method\ for\ looking\ around\ a\ room\r\n
+comment4.params=
+comment4.target=void\ playerPickup()
+comment4.text=\r\n\ Method\ for\ picking\ up\ items\r\n
+comment5.params=
+comment5.target=void\ playerDrop()
+comment5.text=\r\n\ Method\ for\ dropping\ items\r\n
+numComments=6

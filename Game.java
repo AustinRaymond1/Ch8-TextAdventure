@@ -12,6 +12,7 @@ public class Game
 {
     private Parser parser;
     private Room currentRoom;
+    private Player player = new Player();
         
     /**
      * Create the game and initialise its internal map.
@@ -159,10 +160,24 @@ public class Game
                 break;
                 
             case LOOK:
+                if (player.playerLook()){
+                    System.out.println("There is an item nearby");
+                }
+                else{
+                    System.out.println("There is not item nearby");
+                }
+                break;
                 
-            
             case PICKUP:
+                player.playerPickup();
+                break;
                 
+            case DROP:
+                player.playerDrop();
+                break;
+                
+            case CHECK:
+                System.out.println("You have " + player.checkInventory() + " in your inventory");
         }
         return wantToQuit;
     }
